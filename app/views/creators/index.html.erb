@@ -1,0 +1,42 @@
+<%= render 'layouts/navigation' %>
+<p id="notice"><%= notice %></p>
+    <div class="row">
+        <div class="box">
+            <div class="col-lg-12">
+                <hr>
+                <h2 class="intro-text text-center">Ellos son los
+                    <strong>los que hacen esto posible</strong>
+                </h2>
+                <hr>
+                 <hr>
+                <h2 class="intro-text text-center">Agregar uno 
+                  <strong><%= link_to 'MAS', new_creator_path %></strong>
+                </h2>
+                <hr>
+                <div class="table-responsive">
+                  <table class="table table-hover">
+                    <thead>
+                      <tr>
+                        <th>Nombre</th>
+                        <th>Descripcion</th>
+                        <th>Avatar</th>
+                        <th>Controles</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                        <% @creators.each do |creator| %>
+                        <tr>
+                          <td><%= creator.nombre %></td>
+                          <td><%= creator.descripcion %></td>
+                          <td><%= creator.avatar %></td>
+                          <td><%= link_to 'Show', creator %></td>
+                          <td><%= link_to 'Edit', edit_creator_path(creator) %></td>
+                          <td><%= link_to 'Destroy', creator, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+                        </tr>
+                        <% end %>
+                    </tbody>
+                  </table>
+                </div>
+            </div>
+        </div>
+    </div>

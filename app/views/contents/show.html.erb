@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Contenido:</strong>
+  <%= @content.contenido %>
+</p>
+
+<p>
+  <strong>Descripcion:</strong>
+  <%= @content.descripcion %>
+</p>
+
+<p>
+  <strong>Creator:</strong>
+  <%= @content.creator_id %>
+</p>
+
+<p>
+  <strong>Category:</strong>
+  <%= @content.category_id %>
+</p>
+
+<p>
+  <strong>Type:</strong>
+  <%= @content.type_id %>
+</p>
+
+<%= link_to 'Edit', edit_content_path(@content) %> |
+<%= link_to 'Back', contents_path %>
